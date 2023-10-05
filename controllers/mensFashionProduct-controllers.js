@@ -23,13 +23,13 @@ const createMensFashionProduct = async (req, res) => {
 };
 
 const getMensFashionProducts = async (req, res) => {
-    const {category} = req.query;   // Get the category from the query parameter
+    const {category} = req.query;  
     
     try {
         let products;
 
         if(category) {
-            // If a category is specified, filter products by category
+            
             products = await MensFashionProduct.find({ category });
         }else {
             products = await MensFashionProduct.find();
@@ -43,7 +43,7 @@ const getMensFashionProducts = async (req, res) => {
     }
 };
 
-// Add more controller functions as needed (e.g., retrieve all products, retrieve a specific product, update, delete, etc.)
+
 
 module.exports = {
     createMensFashionProduct,

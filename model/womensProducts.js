@@ -1,7 +1,6 @@
-// Backend/model/MensFashionProduct.js
 const mongoose = require("mongoose");
 
-const mensFashionProductSchema = new mongoose.Schema({
+const womensProductSchema = new mongoose.Schema({
     name: {
         type: String,
         required: true,
@@ -16,12 +15,11 @@ const mensFashionProductSchema = new mongoose.Schema({
     },
     images: [{
         type: String,
-        
     }],
     category: [{
-        type : String,
+        type: String,
         required: true,
     }],
 });
 
-module.exports = mongoose.model("MensFashionProduct", mensFashionProductSchema);
+module.exports = mongoose.model("WomensProduct", womensProductSchema);
