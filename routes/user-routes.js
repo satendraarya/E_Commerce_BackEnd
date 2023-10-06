@@ -9,14 +9,27 @@ const {
     logout,
 } = require("../controllers/user-controllers");
 
-// Import the new controller
+// Import the MensProducts controller
 const {
     createMensFashionProduct,
     getMensFashionProducts,
     
 } = require("../controllers/mensFashionProduct-controllers");
 
-const { createWomensProducts, getWomensProducts } = require("../controllers/womensProducts-controllers");
+
+// Import the WomensProducts controller
+
+const { 
+    createWomensProducts, 
+    getWomensProducts 
+} = require("../controllers/womensProducts-controllers");
+
+// Import the MobilesProducts controller
+
+const { 
+    createMobilesProduct, 
+    getMobilesProduct 
+} = require("../controllers/mobilesProduct-controllers");
 
 const router = express.Router();
 
@@ -36,7 +49,10 @@ router.get("/mens-fashion-products", getMensFashionProducts);
 router.post("/womens-products", createWomensProducts);
 router.get("/womens-products", getWomensProducts);
 
+// Add routes for MobilesProducts
 
+router.post("/mobiles-products", createMobilesProduct);
+router.get("/mobiles-products", getMobilesProduct);
 
 module.exports = router;
 
