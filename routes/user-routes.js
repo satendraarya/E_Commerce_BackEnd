@@ -31,6 +31,13 @@ const {
     getMobilesProduct 
 } = require("../controllers/mobilesProduct-controllers");
 
+
+// import ElectronicsProducts controller
+const { 
+    createElectronicProducts, 
+    getElectronicProducts 
+} = require("../controllers/ElectronicProducts-controllers");
+
 const router = express.Router();
 
 router.post("/signup", signup);
@@ -53,6 +60,11 @@ router.get("/womens-products", getWomensProducts);
 
 router.post("/mobiles-products", createMobilesProduct);
 router.get("/mobiles-products", getMobilesProduct);
+
+// Add routes ElectronicProducts
+
+router.post("/electronics-products", createElectronicProducts);
+router.get("/electronics-products", getElectronicProducts);
 
 module.exports = router;
 
